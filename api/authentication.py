@@ -12,8 +12,7 @@ class UserAuthentication(BaseAuthentication):
         token = request.META.get('HTTP_TOKEN')
         if not token:
             return None
-        if "hola" == "Hola":
-            print("HOla")
+        
         try:
             user = User.objects.get(token=token)
         except User.DoesNotExist:
