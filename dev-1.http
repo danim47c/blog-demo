@@ -1,0 +1,42 @@
+GET http://localhost:8000/api/posts/ HTTP/1.1
+content-type: application/json
+
+###
+
+GET http://localhost:8000/api/posts/5 HTTP/1.1
+content-type: application/json
+TOKEN: 8e97941fa0636ae73ea82518b67fd5bcc600660ea73cb470
+
+###
+
+POST http://localhost:8000/api/posts/ HTTP/1.1
+content-type: application/json
+TOKEN: 4b12133aceca22e578df181c1852113687bc89512ea28cf5
+
+{
+    "title": "Title #6",
+    "content": "Content #6"
+}
+
+###
+
+PUT http://localhost:8000/api/posts/5/ HTTP/1.1
+content-type: application/json
+TOKEN: 8a23f0e864b7380833bce90069a32fcdddcca949fe333eed
+
+{
+    "title": "Title #2",
+    "content": "Contentido de pruebaae"
+}
+
+###
+
+DELETE http://localhost:8000/api/posts/5/ HTTP/1.1
+content-type: application/json
+TOKEN: 8a23f0e864b7380833bce90069a32fcdddcca949fe333eed
+
+###
+
+POST http://localhost:8000/api/posts/5/like/ HTTP/1.1
+content-type: application/json
+TOKEN: 8a23f0e864b7380833bce90069a32fcdddcca949fe333eed

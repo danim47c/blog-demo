@@ -1,0 +1,33 @@
+POST http://localhost:8000/api/users/register/ HTTP/1.1
+content-type: application/json
+
+{
+    "username": "123456",
+    "password": "1234"
+}
+
+###
+
+POST http://localhost:8000/api/users/login/ HTTP/1.1
+content-type: application/json
+
+{
+    "username": "1234",
+    "password": "1234"
+}
+
+###
+
+POST http://localhost:8000/api/users/6/change_password/ HTTP/1.1
+content-type: application/json
+TOKEN: 4129bb16729fce2afb61dc3d1670270e5f7b41cd4fec8ca3
+
+{
+    "old_password": "1234",
+    "new_password": "12345"
+}
+
+###
+
+GET http://localhost:8000/api/users/5/ HTTP/1.1
+content-type: application/json
